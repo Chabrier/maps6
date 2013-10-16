@@ -1,0 +1,36 @@
+\documentclass[xetex]{article}
+\usepackage[active,tightpage]{preview}
+\usepackage{amsmath}
+\usepackage{mathspec}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usetikzlibrary{snakes,arrows,shapes,automata,backgrounds}
+\defaultfontfeatures{Scale=MatchLowercase}
+\setromanfont[Mapping=tex-text]{Droid Serif}
+\setsansfont[Mapping=tex-text]{Droid Sans}
+\setmainfont[Mapping=tex-text]{Droid Sans}
+\setmonofont[Mapping=tex−text,Scale=0.8]{Droid Sans Mono}
+\setmathsfont(Digits,Latin,Greek)[Numbers={Lining,Proportional}]{DejaVu Sans}
+
+\begin{document}
+
+\newcommand{\cA}{1}
+\newcommand{\cB}{0}
+\newcommand{\cC}{1}
+\newcommand{\cD}{0}
+\newcommand{\maxY}{1}
+\newcommand{\minY}{-1}
+
+\begin{preview}
+  \begin{tikzpicture}
+    \draw[very thin,color=gray] (-0.1,\minY) grid (6.9,\maxY);
+    \draw[->] (-0.2,0) -- (7.2,0) node[right] {$t$};
+    \draw[->] (0,\minY) -- (0,\maxY) node[above] {$S$};
+    \draw[smooth,thick,samples=250,color=blue,domain=0:7] plot function{(\cA)*
+      (cos((\cC)*x+(\cD))) + \cB} node[right] {};
+    \draw[color=black,very thick,fill=white] (7cm,-.7) -- (7cm,-.7)
+    node[anchor=east] {State of a system};
+  \end{tikzpicture}
+\end{preview}
+\end{document}

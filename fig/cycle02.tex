@@ -1,0 +1,35 @@
+\documentclass[xetex,dvipsnames]{article}
+\usepackage[active,tightpage]{preview}
+\usepackage{amsmath}
+\usepackage{mathspec}
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes,automata,backgrounds}
+\defaultfontfeatures{Scale=MatchLowercase}
+\setromanfont[Mapping=tex-text]{Droid Serif}
+\setsansfont[Mapping=tex-text]{Droid Sans}
+\setmainfont[Mapping=tex-text]{Droid Sans}
+\setmonofont[Mapping=tex text,Scale=0.8]{Droid Sans Mono}
+\setmathsfont(Digits,Latin,Greek)[Numbers={Lining,Proportional}]{DejaVu Sans}
+
+\begin{document}
+\begin{preview}
+    \tikzstyle{action}=[rectangle,draw=OliveGreen!50,fill=OliveGreen!20,thick,
+    minimum width=2.5cm, minimum height=1cm]
+    \tikzstyle{result}=[rectangle,draw=Mahogany!50,fill=Mahogany!20,thick,
+    minimum width=2.5cm, minimum height=1cm]
+    \tikzstyle{pre}=[<-,semithick]
+    \tikzstyle{post}=[->,semithick]
+    \tikzstyle{postr}=[->,thick,draw=Mahogany!50]
+ \begin{tikzpicture}[scale=0.8, transform shape]
+  \node at (0,0)  [action] (modeling) {modélisation} ;
+  \node at (3,0)  [result] (mdlfml) {modèle formel}
+  edge [pre, bend left] (modeling) ;
+  \node at (6,0)  [action] (impl) {implémentation}
+  edge [pre, bend left] (mdlfml) ;
+  \node at (9,0)  [result] (mdlvle) {modèle vle}
+  edge [pre, bend left] (impl) ;
+ \end{tikzpicture}
+\end{preview}
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[xetex, dvipsnames]{article}
+\usepackage[active,tightpage]{preview}
+\usepackage{amsmath}
+\usepackage{mathspec}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usetikzlibrary{snakes,arrows,shapes,automata,backgrounds}
+\defaultfontfeatures{Scale=MatchLowercase}
+\setromanfont[Mapping=tex-text]{Droid Serif}
+\setsansfont[Mapping=tex-text]{Droid Sans}
+\setmainfont[Mapping=tex-text]{Droid Sans}
+\setmonofont[Mapping=tex−text,Scale=0.8]{Droid Sans Mono}
+\setmathsfont(Digits,Latin,Greek)[Numbers={Lining,Proportional}]{DejaVu Sans}
+
+\begin{document}
+
+\newcommand{\cA}{1}
+\newcommand{\cB}{0}
+\newcommand{\cC}{1}
+\newcommand{\cD}{0}
+\newcommand{\maxY}{1}
+\newcommand{\minY}{-1}
+
+\begin{preview}
+  \begin{tikzpicture}
+    \draw[very thin,color=gray] (-0.1,\minY) grid (6.9,\maxY);
+    \draw[->] (-0.2,0) -- (7.2,0) node[right] {$t$};
+    \draw[->] (0,\minY) -- (0,\maxY) node[above] {$S$};
+    \draw[loosely dotted,smooth, ultra thick,samples=250,color=blue!50,domain=0:7] plot
+    function{(\cA)* (cos((\cC)*x+(\cD))) + \cB} node[right] {};
+
+    %% observation
+    \draw[color=black,very thick,fill=black] (7,0.7) circle (0.05);
+    \draw[color=black, semithick,fill=black,->] (6,0.95) -> (7,0.7);
+
+    %% transitory state
+    \draw[color=RawSienna,thick,fill=black] (0,1) -> (1.5,1);
+    \draw[color=RawSienna,thick,fill=black] (1.5,0.1) -> (2,0.1);
+    \draw[color=RawSienna,thick,fill=black] (2,-0.4) -> (3,-0.4);
+    \draw[color=RawSienna,thick,fill=black] (3,-1) -> (4.5,-1);
+    \draw[color=RawSienna,thick,fill=black] (4.5,-0.25) -> (5,-0.25);
+    \draw[color=RawSienna,thick,fill=black] (5,0.3) -> (6,0.3);
+    \draw[color=RawSienna,thick,fill=black] (6,0.95) -> (7,0.95);
+
+    %% dashed transitory state
+    \draw[color=black, thin, dashed,fill=black] (1.5,1) -- (1.5,0.1);
+    \draw[color=black, thin, dashed,fill=black] (2,0.11) -- (2,-0.4);
+    \draw[color=black, thin, dashed,fill=black] (3,-0.4) -- (3,-1);
+    \draw[color=black, thin, dashed,fill=black] (4.5,-1) -- (4.5,-0.25);
+    \draw[color=black, thin, dashed,fill=black] (5,-0.25) -- (5,0.3);
+    \draw[color=black, thin, dashed,fill=black] (6,0.3) -- (6,.95);
+    \draw[color=black, thin, dashed,fill=black] (7,0.95) -- (7,.7);
+
+    \draw[color=black,very thick,fill=white] (7cm,-.7) -- (7cm,-.7)
+    node[anchor=east] {Finish observation};
+  \end{tikzpicture}
+\end{preview}
+\end{document}

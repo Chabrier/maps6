@@ -1,0 +1,49 @@
+\documentclass[xetex, dvipsnames]{article}
+\usepackage[active,tightpage]{preview}
+\usepackage{amsmath}
+\usepackage{mathspec}
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes,automata,backgrounds}
+\defaultfontfeatures{Scale=MatchLowercase}
+\setromanfont[Mapping=tex-text]{Droid Serif}
+\setsansfont[Mapping=tex-text]{Droid Sans}
+\setmainfont[Mapping=tex-text]{Droid Sans}
+\setmonofont[Mapping=tex text,Scale=0.8]{Droid Sans Mono}
+\setmathsfont(Digits,Latin,Greek)[Numbers={Lining,Proportional}]{DejaVu Sans}
+
+\begin{document}
+\begin{preview}
+      \begin{tikzpicture}
+        \tikzstyle{level 1}=[level distance=1cm]
+        \tikzstyle{level 2}=[level distance=1cm]
+        \draw[top color=Mahogany] (0,0) rectangle (3.5,2);
+        \draw[fill=black] (0,0.125) -- (0,0.375) -- (0.125, 0.25) ;
+        \draw[fill=black] (0,1.625) -- (0,1.875) -- (0.125, 1.75) ;
+        \draw[fill=black] (3.5,0.125) -- (3.5,0.375) -- (3.625, 0.25) ;
+        \draw[fill=black] (3.5,1.625) -- (3.5,1.875) -- (3.625, 1.75) ;
+        \draw[fill=white] (0.5, 0.75) rectangle (1.5,1.75) ;
+        \draw[fill=black] (0.5,1.375) -- (0.5,1.625) -- (0.625,1.5) ;
+        \draw[fill=black] (1.5,1.375) -- (1.5,1.625) -- (1.625,1.5) ;
+        \draw[fill=black] (1.5,0.875) -- (1.5,1.125) -- (1.625,1) ;
+        \draw[fill=white] (2,0.25) rectangle (3,1.25) ;
+        \draw[fill=black] (2,0.875) -- (2,1.125) -- (2.125,1) ;
+        \draw[fill=black] (2,0.375) -- (2,0.625) -- (2.125,0.5) ;
+        \draw[fill=black] (3,0.375) -- (3,0.625) -- (3.125,0.5) ;
+        \draw (0.125,1.75) -- (0.5,1.5) ;
+        \draw (1.625,1.5) -- (3.5,1.75) ;
+        \draw (1.625,1) -- (2,1) ;
+        \draw (0.125,0.25) -- (2,0.5) ;
+        \draw (3.125,0.5) -- (3.5,0.25) ;
+        \node (a) at (1,1) {a} ;
+        \node (b) at (2.5,0.5) {b} ;
+
+        \node (c) at (7,2) {coordinateur racine}
+        child[sibling distance=4cm] {node [top color=Mahogany]{coordinateur}
+          child[sibling distance=2cm] {node {simul. a}}
+          child[sibling distance=2cm] {node {simul. b}}
+        };
+      \end{tikzpicture}
+\end{preview}
+\end{document}
