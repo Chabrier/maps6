@@ -13,13 +13,15 @@
 %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-\documentclass[xetex, compress, table, dvipsnames]{beamer}
+\documentclass[xetex, compress, table, svgnames]{beamer}
+\usefonttheme[onlymath]{serif}
 \usepackage{fontspec}
 \usepackage{xltxtra}
-\defaultfontfeatures{Scale=MatchLowercase}
-\setromanfont[Mapping=tex-text]{Droid Serif}
-\setsansfont[Mapping=tex-text]{Droid Sans}
-\setmonofont[Mapping=tex−text,Scale=0.8]{Droid Sans Mono}
+\defaultfontfeatures{Ligatures=TeX,Numbers=OldStyle,Scale=MatchLowercase}
+\setromanfont[Mapping=tex−text]{Linux Libertine O}
+\setsansfont[Mapping=tex−text]{Linux Biolinum O}
+\setmonofont[Mapping=tex−text,Scale=0.9]{Courier New}
+
 \usepackage[english]{babel}
 \usepackage{hyperref}
 \usepackage{colortbl}
@@ -36,17 +38,17 @@
 
 \usetheme{Boadilla}
 \usecolortheme[named=Black]{structure}
-\setbeamercolor{alerted text}{fg=Green!50!Black}
+%\setbeamercolor{alerted text}{fg=Green!50!Black}
 % /usr/share/texmf-texlive/tex/latex/graphics/dvipsnam.def
-\setbeamercolor{normal text}{fg=Black,bg=White}
-\setbeamercolor{example text}{fg=Blue}
-\setbeamercolor{alerted text}{fg=RawSienna}
-\setbeamercolor{structure}{fg=black}
-\setbeamercolor{background canvas}{parent=normal text}
+%\setbeamercolor{normal text}{fg=Black,bg=White}
+%\setbeamercolor{example text}{fg=Blue}
+\setbeamercolor{alerted text}{fg=DarkRed}
+%\setbeamercolor{structure}{fg=black}
+%\setbeamercolor{background canvas}{parent=normal text}
 
 \title[VLE]{VLE : \emph{Virtual Laboratory Environmnent}}
 
-\subtitle[]{Journée Devlog sur l'apport de l'IDM pour la mise en œuvre
+\subtitle[]{Journée Devlog sur l'apport de l'IDM\\Pour la mise en œuvre
 des modèles scientifiques}
 
 \author[Quesnel \emph{et al.}]{Gauthier Quesnel}
@@ -88,7 +90,7 @@ des modèles scientifiques}
   pdfsubject  = {},
   pdfkeywords = {},
   pdfcreator  = {vim, beamer},
-  pdfproducer = {PDFLaTeX}
+  pdfproducer = {xelatex}
   citecolor=RawSienna,
   filecolor=RawSienna,
   linkcolor=Gray,
@@ -149,18 +151,17 @@ des modèles scientifiques}
         \end{itemize}
         \begin{figure}
           \centering
-          \includegraphics[width=.8\textwidth]{gvle}
+          \includegraphics[width=.7\textwidth]{gvle}
         \end{figure}
       \end{column}
       \begin{column}{.47\textwidth}
         \begin{figure}
           \centering
-          \includegraphics[width=.8\textwidth]{yellowvle}
+          \includegraphics[width=.7\textwidth]{yellowvle}
         \end{figure}
-
         \begin{figure}
           \centering
-          \includegraphics[width=.8\textwidth]{fsa}
+          \includegraphics[width=.7\textwidth]{fsa}
         \end{figure}
       \end{column}
     \end{columns}
@@ -179,11 +180,40 @@ des modèles scientifiques}
   \frametitle{DEVS}
   \framesubtitle{}
   \begin{exampleblock}{DEVS, un formalisme de M\&S de systèmes
-    dynamiques de bas niveau :}
+    dynamiques de bas niveau}
     \begin{itemize}
-      \item est initié en 1976 par B.\,P.\,Zeigler et est issu des
+      \item Initié en 1976 par B.\,P.\,Zeigler et est issu des
         \alert{mathématiques discrètes}
+    \item Un formalisme à \alert{événements discrets}
     \end{itemize}
+    \vfill
+     
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{DEVS}
+  \begin{exampleblock}{Simulation de la trajectoire d'une balle}
+    \begin{figure}[h]
+      \centering
+      \includegraphics<1>[width=.7\textwidth]{fig/billard-00}
+      \includegraphics<2>[width=.7\textwidth]{fig/billardt-01}
+      \includegraphics<3>[width=.7\textwidth]{fig/billardt-02}
+      \includegraphics<4>[width=.7\textwidth]{fig/billardt-03}
+      \includegraphics<5>[width=.7\textwidth]{fig/billardt-04}
+      \includegraphics<6>[width=.7\textwidth]{fig/billardt-05}
+      \includegraphics<7>[width=.7\textwidth]{fig/billardt-06}
+      \includegraphics<8>[width=.7\textwidth]{fig/billardt-07}
+      \includegraphics<9>[width=.7\textwidth]{fig/billarde-08}
+      \begin{onlyenv}<2-8>
+
+        Temps discrets : \alert{Quel} est mon état a $t$ ?
+      \end{onlyenv}
+      \begin{onlyenv}<9>
+
+        Événement discret : \alert{Quand} le prochain changement d'état aura lieu ?
+      \end{onlyenv}
+    \end{figure}
   \end{exampleblock}
 \end{frame}
 
@@ -191,12 +221,12 @@ des modèles scientifiques}
   \frametitle{DEVS}
   \framesubtitle{}
   \begin{exampleblock}{DEVS, un formalisme de M\&S de systèmes
-      dynamiques de bas niveau :}
+      dynamiques de bas niveau}
     \begin{itemize}
-    \item est initié en 1976 par B.\,P.\,Zeigler et est issu des
+    \item Initié en 1976 par B.\,P.\,Zeigler et est issu des
       \alert{mathématiques discrètes}
-    \item est un formalisme à \alert{événements discrets}
-    \item propose deux types de modèles \alert{atomiques} et
+    \item Un formalisme à \alert{événements discrets}
+    \item Propose deux types de modèles \alert{atomiques} et
       \alert{couplés} :
       \begin{itemize}
       \item les modèles atomiques sont composés d'\alert{états}
@@ -210,13 +240,14 @@ des modèles scientifiques}
       simulateurs abstraits
     \end{itemize}
     \pause
-
-    $\rightarrow$ \alert{\textbf{les formalismes de systèmes dynamiques
-        peuvent être traduits en DEVS}}
+    \begin{description}
+      \item[Propriété:] les formalismes de systèmes dynamiques
+        peuvent être traduits en DEVS
+    \end{description}
   \end{exampleblock}
   \pause
-  \begin{alertblock}{VLE : \textit{Virtual Laboratory Environment}}
-    Une implémentation des simulateurs abstraits
+  \begin{alertblock}{}
+    VLE : Une implémentation des simulateurs abstraits
   \end{alertblock}
 \end{frame}
 
@@ -292,13 +323,12 @@ des modèles scientifiques}
       associées.
     \item $D$ l'ensemble des \alert{identifiants des sous modèles}
       avec : $\{ M_d | d \in D \}$.
-    \item $\forall d \in D \cup \{N\}$, $I_d$ the influencer set of
-      $d$ $I_d \subseteq D \cup \{N\},d \notin I_d$
+    \item $\forall d \in D \cup \{N\}$, $I_d$ l'ensemble des perturbateurs de : $d$\\$I_d \subseteq D \cup \{N\},d \notin I_d$
     \item $\forall d \in D \cup \{N\}$\\
       $\forall i \in I_d$, $Z_{i,d}$ est une fonction i-to-d :\\
       \hspace{1cm}$Z_{i,d}:X \rightarrow X_d$, if $i = N$ (connexions d'entrée)\\
       \hspace{1cm}$Z_{i,d}:Y_i \rightarrow Y$, if $d = N$ (connexions de sorties)\\
-      \hspace{1cm}$Z_{i,d}:Y_i \rightarrow X_d$ if $i \neq N$ and $d
+      \hspace{1cm}$Z_{i,d}:Y_i \rightarrow X_d$ if $i \neq N$ et $d
       \neq N$ (connexions internes)
     \end{itemize}
   \end{exampleblock}
@@ -366,12 +396,13 @@ des modèles scientifiques}
       2003,
     \item Environnement de Multimodélisation et de simulation de
       systèmes complexes basé sur DEVS
-    \item VLE fourni un ensemble de bibliothèques C++ appelées VFL
-      (\alert{VLE Foundation Libraries})
-    \item VLE fourni un simulateur en ligne de commande, une interface
-      graphique de modélisation, un paquet R pour l'analyse et la
-      visualisation de résultats et un paquet python pour le
-      développement de service web
+    \item VLE fournit une bibliothèque C++ appelée VFL
+      (\alert{VLE Foundation Library})
+    \item VLE fournit un \alert{simulateur en ligne de commande}, une
+      \alert{interface graphique} de modélisation, un \alert{paquet R}
+      pour l'analyse et la visualisation de résultats, un
+      \alert{programme Python} pour le développement de service web et
+      un \alert{système de paquets} pour étendre VLE
     \end{itemize}
   \end{block}
   \pause
@@ -428,7 +459,7 @@ des modèles scientifiques}
       \item [$\rightarrow$] Augmentation de la puissance descriptive du modèle
       \item [$\rightarrow$] Introduit la notion de couplage
       \end{itemize}
-    \item La multimodélisation est l’ensemble des concepts, outils et
+    \item La multimodélisation est l'ensemble des concepts, outils et
       techniques de construction de multimodèles.
     \end{itemize}
   \end{alertblock}
@@ -457,7 +488,7 @@ des modèles scientifiques}
     des sous-classes du modèle atomic DEVS):\\~\\
     \begin{itemize}
     \item Solvers pour la \alert{simulation d'équations
-        différentielles ordinaires d'ordre 1} :
+        différentielles ordinaires d'ordre 1}
       \begin{itemize}
       \item Euler, Runge Kutta order 4, QSS 1 et QSS 2
       \end{itemize}
@@ -631,7 +662,7 @@ public:
 \begin{frame}
   \frametitle{Développement de modèles}
   \begin{block}{Sous-formalismes}
-    DEVS permet de développer des sous-formalismes de DEVS. Avec VLE
+    DEVS permet de développer des sous-formalismes de DEVS\@. Avec VLE
     nous fournissons des extensions :
     \begin{description}
     \item[dynamiques] qui encapsulent un formalisme mathématique comme
@@ -756,7 +787,7 @@ class MyModel: public vle::extension::DifferenceEquation
     \begin{exampleblock}{}
       \alert{Modélisation} à l'aide des outils
       \alert{classiques} de modélisation, équations
-      différentielles, équations aux différences, automates, etc. tout
+      différentielles, équations aux différences, automates, etc.\ tout
       en restant dans une modélisation de systèmes dynamiques.
     \end{exampleblock}
   \end{onlyenv}
@@ -773,7 +804,7 @@ class MyModel: public vle::extension::DifferenceEquation
       \alert{Préparer} la plan d'expérience,
       \alert{initialisation} des paramètres et des variables, le
       nombre de \alert{répliquas}, les modèles à
-      \alert{observer}, alert{comment}, et \alert{où} diriger
+      \alert{observer}, \alert{comment}, et \alert{où} diriger
       les données : \alert{gvle}.
     \end{exampleblock}
   \end{onlyenv}
@@ -812,13 +843,13 @@ class MyModel: public vle::extension::DifferenceEquation
   \end{block}
   \pause
   \begin{block}{Autre projet : PROTEUS}
-    «\,Plate-forme pour la Robotique Organisant les Transferts Entre
-    Utilisateurs et Scientifiques\,»
-    \\~\\
-    Groupe de Recherche en Robotique et partenaires industriels
-    (Dassault Aviation, CEA, Thales, LASMEA, INRIA, Onera, etc.
-    \\~\\
-    Utilisation de VLE comme simulateur de robot
+    \begin{itemize}
+      \item «\,Plate-forme pour la Robotique Organisant les Transferts
+        Entre Utilisateurs et Scientifiques\,»
+      \item Groupe de Recherche en Robotique et partenaires industriels
+        (Dassault Aviation, CEA, Thales, LASMEA, INRIA, Onera, etc.
+      \item Utilisation de VLE comme simulateur de robot
+    \end{itemize}
   \end{block}
 \end{frame}
 
@@ -826,7 +857,7 @@ class MyModel: public vle::extension::DifferenceEquation
 
 \begin{frame}{allowframebreaks}
   \frametitle{Références}
-  \small{
+  \small{%
     \bibliographystyle{plain}
     \bibliography{publi}
 }
