@@ -9,9 +9,9 @@ OUTPUT_PDF=$(TEXS:tex=pdf) $(PNGS:png=pdf) $(JPGS:jpg=pdf) $(SVGS:svg=pdf)
 all: $(OUTPUT_PDF)
 
 clean:
-	-@rm -f *.aux *.log *.toc *.pdf *.bbl *.blg *.dvi *.ps *~ *.bak \
-	  *.bmt *.out *.lof *.lot *.mlf? *.mlt? *.mtc *.mtc* *.pdf \
-	  *.fdb_latexmk
+	-@rm -f *.gnuplot *.table *.aux *.log *.toc *.pdf *.bbl *.blg \
+	  *.dvi *.ps *~ *.bak *.bmt *.out *.lof *.lot *.mlf? *.mlt? \
+	  *.mtc *.mtc* *.pdf *.fdb_latexmk
 
 %.pdf: %.png
 	convert $< -format "pdf" $@
