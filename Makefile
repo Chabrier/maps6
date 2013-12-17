@@ -5,7 +5,7 @@ FILE=$(BASEDIR)-$(DATE).tar.bz2
 
 all: maps6.pdf
 
-devlog.pdf: figures maps6.tex publi.bib Makefile
+maps6.pdf: figures maps6.tex publi.bib Makefile
 	latexmk -pdf maps6.tex
 
 figures:

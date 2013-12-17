@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1052.3622"
+   height="744.09448"
+   id="svg4974"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="ActionClassDiagramAndScheduller.svg">
+  <metadata
+     id="metadata5048">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Template Method pattern</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1615"
+     inkscape:window-height="1026"
+     id="namedview5046"
+     showgrid="true"
+     inkscape:zoom="1.2081799"
+     inkscape:cx="526.18109"
+     inkscape:cy="372.04724"
+     inkscape:window-x="1425"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4974">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3205"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <title
+     id="title4976">Template Method pattern</title>
+  <defs
+     id="defs4978">
+    <style
+       type="text/css"
+       id="style4980">
+        g{
+          stroke       : #000;
+        }
+        rect, path, circle{
+          fill         : #fff;
+          fill-opacity : 0;
+        }
+        rect{
+          stroke-width : 6;
+        }
+        path, circle, line{
+          stroke-width : 2;
+        }
+        text{
+          fill         : #000;
+          stroke-width : 0;
+          font-family  : sans-serif;
+        }
+        text.name{
+          font-size    : 25px;
+          font-weight  : bold;
+          text-anchor  : middle;
+        }
+        text.item{
+          font-size    : 25px;
+        }
+        text.visibility{
+          font-size    : 28px;
+          font-family  : monospace;
+          font-weight  : bold;
+          text-anchor  : middle;
+        }
+        text.abstract{
+          font-style   : italic;
+        }
+        text.note{
+          font-size    : 20px;
+        }
+      </style>
+  </defs>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="588.22321"
+     y="542.89874"
+     id="text5322"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan5324"
+       x="588.22321"
+       y="542.89874" /></text>
+  <g
+     id="g3321"
+     transform="matrix(1.3646379,0,0,1.318255,39.838975,-236.23417)"
+     style="stroke:#000000;stroke-width:0.74557543">
+    <g
+       style="stroke:#000000;stroke-width:0.7518537"
+       id="g5022"
+       transform="matrix(0,0.983369,-1,0,490.10983,323.00542)">
+      <desc
+         id="desc5024">class Adapter implements Target</desc>
+      <path
+         style="fill:#ffffff;fill-opacity:0;stroke-width:1.50370741"
+         inkscape:connector-curvature="0"
+         id="path5026"
+         d="m 5,0 30,-15 0,30 z" />
+      <path
+         style="fill:#ffffff;fill-opacity:0;stroke-width:1.50370741"
+         inkscape:connector-curvature="0"
+         id="path5028"
+         d="M 35,0 180,0" />
+    </g>
+    <g
+       style="stroke:#000000;stroke-width:0.74557543"
+       transform="translate(288.86169,178.09449)"
+       id="g3166">
+      <rect
+         style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:4.47345304"
+         y="40"
+         x="40"
+         id="rect4984"
+         height="105.47716"
+         width="322.49628" />
+      <line
+         style="stroke:#000000;stroke-width:1.49115086"
+         id="line4986"
+         y2="100"
+         y1="100"
+         x2="360"
+         x1="40" />
+      <line
+         style="stroke:#000000;stroke-width:1.49115086"
+         id="line4988"
+         y2="120"
+         y1="120"
+         x2="360"
+         x1="40" />
+      <text
+         style="font-size:25px;font-style:italic;font-weight:bold;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:0;font-family:sans-serif"
+         id="text4990"
+         class="name abstract"
+         y="85"
+         x="200">PropertiesContainer</text>
+      <g
+         style="stroke:#000000;stroke-width:0.74557543"
+         id="g3136">
+        <text
+           sodipodi:linespacing="125%"
+           id="text3055"
+           y="112.2"
+           x="175.08829"
+           style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           xml:space="preserve"><tspan
+             y="112.2"
+             x="175.08829"
+             id="tspan3057"
+             sodipodi:role="line">...</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text3059"
+           y="136.12552"
+           x="174.25241"
+           style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           xml:space="preserve"><tspan
+             y="136.12552"
+             x="174.25241"
+             id="tspan3061"
+             sodipodi:role="line">...</tspan></text>
+      </g>
+    </g>
+    <text
+       x="488.16525"
+       y="546.05859"
+       class="name abstract"
+       id="text4990-3"
+       style="font-size:25px;font-style:italic;font-weight:bold;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:0;font-family:sans-serif">Action</text>
+    <rect
+       width="320"
+       height="232.84589"
+       id="rect5006"
+       x="330.10983"
+       y="502.37793"
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:4.47345304" />
+    <line
+       x1="330.10983"
+       x2="650.1098"
+       y1="562.37793"
+       y2="562.37793"
+       id="line5008"
+       style="stroke:#000000;stroke-width:1.49115086" />
+    <line
+       x1="330.10983"
+       x2="650.1098"
+       y1="708.37793"
+       y2="708.37793"
+       id="line5010"
+       style="stroke:#000000;stroke-width:1.49115086" />
+    <text
+       x="351.93008"
+       y="660.85138"
+       class="item"
+       id="text5016"
+       style="font-size:25px;fill:#000000;stroke:#000000;stroke-width:0;font-family:sans-serif">Origin</text>
+    <text
+       x="350.88028"
+       y="697.01251"
+       class="item"
+       id="text5020"
+       style="font-size:25px;fill:#000000;stroke:#000000;stroke-width:0;font-family:sans-serif">EffectFunction</text>
+    <text
+       x="350.88028"
+       y="595.41388"
+       class="item"
+       id="text5016-5"
+       style="font-size:25px;fill:#000000;stroke:#000000;stroke-width:0;font-family:sans-serif">Date</text>
+    <text
+       x="350.88028"
+       y="629.15192"
+       class="item"
+       id="text5016-5-1"
+       style="font-size:25px;fill:#000000;stroke:#000000;stroke-width:0;font-family:sans-serif">Name</text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3055-8"
+       y="728.28448"
+       x="449.98178"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="728.28448"
+         x="449.98178"
+         id="tspan3057-5"
+         sodipodi:role="line">...</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3055-8-7"
+       y="454.09448"
+       x="93.777328"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="454.09448"
+         x="93.777328"
+         id="tspan3057-5-2"
+         sodipodi:role="line">...</tspan></text>
+    <g
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.7518537"
+       id="g5022-6"
+       transform="matrix(0,0.983369,-1,0,235.10983,263.00543)">
+      <desc
+         id="desc5024-2">class Adapter implements Target</desc>
+      <path
+         style="fill:#000000;fill-opacity:1;stroke-width:1.50370741"
+         inkscape:connector-curvature="0"
+         id="path5026-6"
+         d="m 5,0 30,-15 0,30 z" />
+      <path
+         style="fill:#000000;fill-opacity:1;stroke-width:1.50370741"
+         inkscape:connector-curvature="0"
+         id="path5028-0"
+         d="M 35,0 180,0" />
+    </g>
+    <path
+       d="m 235.3487,640.57451 -15,-29.50107 30,0 z"
+       id="path5026-4"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.49115086" />
+    <path
+       d="m 235.3487,611.07344 0,-142.5885"
+       id="path5028-6"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.49115086" />
+    <path
+       d="m 112.8496,245.04839 -15.000003,-29.50107 30.000003,0 z"
+       id="path5026-4-1"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.49115086" />
+    <path
+       d="m 113.02395,215.54732 -0.3487,-41.97896"
+       id="path5028-6-2"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.49115086"
+       sodipodi:nodetypes="cc" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3207"
+       d="m 40.349595,244.09449 0,430 145.000005,0 0,-430"
+       style="fill:none;stroke:#000000;stroke-width:2.46039891;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <g
+       style="stroke:#000000;stroke-width:0.74557543"
+       transform="translate(-10.703686,384.09449)"
+       id="g4181">
+      <rect
+         style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:4.47345304"
+         y="-122.76914"
+         x="62.049191"
+         id="rect5006-6"
+         height="53.708313"
+         width="123.00819" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4116"
+         y="-110.75688"
+         x="76.773247"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px"
+           y="-110.75688"
+           x="76.773247"
+           id="tspan4118"
+           sodipodi:role="line">now</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="125"
+         y="-80"
+         id="text4156"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4158"
+           x="125"
+           y="-80"
+           style="font-size:14px">actionA</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3055-8-7-9"
+       y="576.09448"
+       x="93.777328"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="576.09448"
+         x="93.777328"
+         id="tspan3057-5-2-3"
+         sodipodi:role="line">...</tspan></text>
+    <g
+       style="stroke:#000000;stroke-width:0.74557543"
+       id="g4181-9"
+       transform="translate(-10.703686,464.09449)">
+      <rect
+         style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:4.47345304"
+         y="-122.76914"
+         x="62.049191"
+         id="rect5006-6-6"
+         height="53.708313"
+         width="123.00819" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4116-6"
+         y="-110.75688"
+         x="76.773247"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px"
+           y="-110.75688"
+           x="76.773247"
+           id="tspan4118-9"
+           sodipodi:role="line">later</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="125"
+         y="-80"
+         id="text4156-0"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4158-0"
+           x="125"
+           y="-80"
+           style="font-size:14px">actionB</tspan></text>
+    </g>
+    <g
+       style="stroke:#000000;stroke-width:0.74557543"
+       id="g4181-3"
+       transform="translate(-10.703686,609.09449)">
+      <rect
+         style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:4.47345304"
+         y="-122.76914"
+         x="62.049191"
+         id="rect5006-6-8"
+         height="53.708313"
+         width="123.00819" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4116-8"
+         y="-110.75688"
+         x="76.773247"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px"
+           y="-110.75688"
+           x="76.773247"
+           id="tspan4118-8"
+           sodipodi:role="line">later</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="125"
+         y="-80"
+         id="text4156-7"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4158-3"
+           x="125"
+           y="-80"
+           style="font-size:14px">actionA</tspan></text>
+    </g>
+    <g
+       style="stroke:#000000;stroke-width:0.74557543"
+       id="g4181-1"
+       transform="translate(-10.703686,729.09449)">
+      <rect
+         style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:4.47345304"
+         y="-122.76914"
+         x="62.049191"
+         id="rect5006-6-2"
+         height="53.708313"
+         width="123.00819" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4116-3"
+         y="-110.75688"
+         x="76.773247"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px"
+           y="-110.75688"
+           x="76.773247"
+           id="tspan4118-88"
+           sodipodi:role="line">never</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="125"
+         y="-80"
+         id="text4156-6"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4158-7"
+           x="125"
+           y="-80"
+           style="font-size:14px">actionC</tspan></text>
+    </g>
+  </g>
+</svg>
